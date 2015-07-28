@@ -1,0 +1,11 @@
+﻿
+<div class="modal-header">
+    <h3 class="modal-title">提示信息!</h3>
+</div>
+<div class="modal-body">
+    {{text.msg}}
+</div>
+<div class="modal-footer">
+    <button ng-if="text.ok" class="btn btn-primary" ng-click="ok()">{{text.ok}}</button>
+    <button ng-if="text.cancel" class="btn btn-warning" ng-click="cancel()">{{text.cancel}}</button>
+</div>

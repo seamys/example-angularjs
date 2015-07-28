@@ -1,0 +1,37 @@
+﻿<form class="form-horizontal col-padding-top">
+    <div class="form-group form-group-sm">
+        <label class="col-sm-1 control-label">{{lang.userName}}:</label>
+        <div class="col-sm-3">
+            <input type="text" ng-model="model.Name" required class="form-control">
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <label class="col-sm-1 control-label">{{lang.realName}}:</label>
+        <div class="col-sm-3">
+            <input type="text" ng-model="model.RealName" required class="form-control">
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <label class="col-sm-1 control-label">{{lang.email}}:</label>
+        <div class="col-sm-3">
+            <input type="email" ng-model="model.Email" required class="form-control">
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <label class="col-sm-1 control-label">{{lang.state}}:</label>
+        <div class="col-sm-3">
+            <label class="radio-inline">
+                <input name="state" ng-model="model.State" value="1" type="radio"> {{lang.active}}
+            </label>
+            <label class="radio-inline">
+                <input name="state" ng-model="model.State" value="2" type="radio">{{lang.lock}}
+            </label>
+            <label class="radio-inline">
+                <input name="state" ng-model="model.State" value="3" type="radio">{{lang.abandon}}
+            </label>
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <div class="col-lg-offset-1"><button ng-click="save()" class="btn btn-success">{{lang.save}}</button></div>
+    </div>
+</form>

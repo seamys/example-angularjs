@@ -1,0 +1,55 @@
+﻿<div class="row">
+    <h4 class="page-header text-info">
+        {{lang.title}}
+    </h4>
+    <form class="form-horizontal">
+        <div class="col-lg-4 clear-padding">
+            <div ce-enter="search" class="input-group">
+                <input type="text" class="form-control" ng-model="Name">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="search(false)" type="button">{{lang.search}}</button>
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-lg-6" style="padding-left:0;">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>{{lang.name}}</th>
+                    <th class="col-sm-2">
+                        <button ng-click="append(item)" class="btn btn-primary btn-xs">{{lang.append}}</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pointer" ng-click="checked(item)" ng-repeat="item in list">
+                    <td ng-if="!item.isModified">{{item.Name}}</td>
+                    <td ng-if="!item.isModified">
+                        <button ng-click="remove(item)" class="btn btn-danger btn-xs">{{lang.remove}}</button>
+                        <button ng-click="edit(item)" class="btn btn-success btn-xs">{{lang.edit}}</button>
+                    </td>
+                    <td ng-if="item.isModified">
+                        <input type="text" class="form-control" ng-model="item.Name" />
+                    </td>
+                    <td ng-if="item.isModified">
+                        <button ng-click="cancel(item)" class="btn btn-danger btn-xs">{{lang.cancel}}</button>
+                        <button ng-click="save(item)" class="btn btn-success btn-xs">{{lang.save}}</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <div class="pull-right">
+                            <div class="pagination-info"><span class="ng-binding">共有{{total}}条</span>， <span class="ng-binding">每页显示：{{size}}条</span></div>
+                            <pagination boundary-links="true" total-items="total" ng-model="current" max-size="10" ng-change="search(true)" items-per-page="size" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿<div class="row">
+    <h4 class="page-header text-info">
+        用户管理
+    </h4>
+    <form class="form-horizontal">
+        <div class="col-lg-1 clear-padding">
+            <select ng-model="type" class="form-control">
+                <option value="">所有相关</option>
+                <option value="1">用户名</option>
+                <option value="2">邮箱</option>
+            </select>
+        </div>
+        <div class="col-lg-4 clear-padding">
+            <div ce-enter="search" class="input-group">
+                <input type="text" class="form-control" ng-model="Name">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="search(false)" type="button">搜索</button>
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th class="col-sm-1">用户名</th>
+                <th class="col-sm-3">角色</th>
+                <th class="col-sm-1">真实姓名</th>
+                <th class="col-sm-2">邮箱</th>
+                <th class="col-sm-2">创建时间</th>
+                <th class="col-sm-1">用户状态</th>
+                <th class="col-sm-2"><a href="#/users/form/" class="btn btn-primary btn-xs">添加用户</a></th>
+            </tr>
+        </thead>
+        <tbody ng-if="!loadingState">
+            <tr ng-repeat="item in list">
+                <td>{{item.Name}}</td>
+                <td>
+                    <a href="javascript:;" ng-click="viewRoles(item)">
+                        {{item.Roles|merge:'Name':2:'...'|none:'未关联角色'}}
+                        <span class="text-success">({{item.Roles.length}})</span>
+                    </a>
+                </td>
+                <td>{{item.RealName}}</td>
+                <td>{{item.Email}}</td>
+
+                <td>{{item.CreateTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td>
+                    {{item.State|state}}
+                </td>
+                <td>
+                    <button type="button" ng-click="remove(item)" class="btn btn-danger btn-xs">删除</button>
+                    <a href="#/users/form/{{item.Id}}" class="btn btn-success btn-xs">编辑</a>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-if="loadingState">
+            <tr>
+                <td colspan="8" class="text-center">
+                    <img width="60" src="/App/images/loading.gif" />
+                </td>
+            </tr>
+        </tbody>
+        <tfoot ng-show="!loadingState">
+            <tr>
+                <td colspan="8">
+                    <div class="pull-right">
+                        <div class="pagination-info"><span class="ng-binding">共有{{total}}条</span>， <span class="ng-binding">每页显示：{{size}}条</span></div>
+                        <pagination boundary-links="true" total-items="total" ng-model="current" max-size="10" ng-change="search(true)" items-per-page="size" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

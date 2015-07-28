@@ -1,0 +1,17 @@
+﻿<div class="row">
+    <h4 class="page-header text-info">
+        用户管理
+    </h4>
+</div>
+<div class="row">
+    <div>
+        <tabset>
+            <tab heading="{{lang.baseInfo}}">
+                <div ng-include="'/users-base'"></div>
+            </tab>
+            <tab heading="{{lang.linkInfo}}" disable="!model.Id" ng-click="checkRules()">
+                <div ng-include="'/users-link'"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>
