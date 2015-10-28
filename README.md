@@ -44,8 +44,3 @@ angularjs+WebAPI 演示项目
 
 演示地址：http://angularjs.frllk.com/#/users/list
 
-
------
-
-####如果这篇文章对你有帮助,麻烦帮忙点个推荐啦。
-![点个赞](http://images0.cnblogs.com/blog2015/329473/201507/132030500166215.jpg)
