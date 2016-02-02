@@ -1,0 +1,48 @@
+{
+  "name": "example-angular",
+  "description": "Writing an AngularJS App with an Express + Node.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/seamys/example-angularjs",
+  "author": {
+    "name": "seamys",
+    "email": "yiim@foxmail.com",
+    "url": "www.frllk.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seamys/example-angularjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seamys/example-angularjs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/seamys/example-angularjs/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/example-angular",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "connect-cachify": "*",
+    "winston": "*",
+    "winston-request-logger": "*",
+    "jade": "*",
+    "nconf": "*",
+    "express": "*",
+    "uglify-js": "*",
+    "uglifycss": "*"
+  },
+  "devDependencies": {
+    "grunt-simple-mocha": "~0.2.0",
+    "mocha": "~1.6.0",
+    "should": "~1.2.0",
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
+}

@@ -1,0 +1,19 @@
+﻿.modal-header
+    h3.modal-title {{lang.viewRoles}}
+.modal-body
+     table.table.table-hover.table-bordered(m-check='')
+        thead
+          tr
+            th.col-sm-2 角色
+            th 权限集
+        tbody
+          tr(ng-repeat='item in roles')
+            td {{item.Name}}
+            td {{item.Funs|merge:'Name':4:'...'|none:'没有关联权限'}}
+        tfoot
+          tr
+            td(colspan='4')
+              .pull-right
+                pagination.pagination-sm(boundary-links='true', total-items='total', ng-model='current', max-size='10', ng-change='search(true)', items-per-page='size', previous-text='‹', next-text='›', first-text='«', last-text='»')
+.modal-footer
+      button.btn.btn-primary(ng-click='ok()') {{lang.ok}}

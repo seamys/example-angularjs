@@ -1,0 +1,50 @@
+﻿.row
+    h4.page-header.text-info 用户管理
+    form.form-horizontal
+        .col-lg-1.clear-padding
+          select.form-control(ng-model='type')
+            option(value='') 所有相关
+            option(value='1') 用户名
+            option(value='2') 邮箱
+        .col-lg-4.clear-padding
+          .input-group(ce-enter='search')
+            input.form-control(type='text', ng-model='Name')
+            span.input-group-btn
+              button.btn.btn-default(ng-click='search(false)', type='button') 搜索
+.row
+      table.table.table-hover.table-bordered
+        thead
+          tr
+            th.col-sm-1 用户名
+            th.col-sm-3 角色
+            th.col-sm-1 真实姓名
+            th.col-sm-2 邮箱
+            th.col-sm-2 创建时间
+            th.col-sm-1 用户状态
+            th.col-sm-2
+              a.btn.btn-primary.btn-xs(href='#/users/form/') 添加用户
+        tbody(ng-show='!loadingState')
+          tr(ng-repeat='item in list')
+            td {{item.Name}}
+            td
+              a(href='javascript:;', ng-click='viewRoles(item)') {{item.Roles|merge:'Name':4:'...'|none:'未关联角色'}}
+                span.text-success ({{item.Roles.length}})
+            td {{item.RealName}}
+            td {{item.Email}}
+            td {{item.CreateTime}}
+            td {{item.State|state}}
+            td
+              button.btn.btn-danger.btn-xs(type='button', ng-click='remove(item)') 删除
+              a.btn.btn-success.btn-xs(href='#/users/form/{{item.Id}}') 编辑
+        tbody(ng-show='loadingState')
+          tr
+            td.text-center(colspan='8')
+              img(width='60', src='/images/loading.gif')
+        tfoot(ng-show='!loadingState')
+          tr
+            td(colspan='8')
+              .pull-right
+                .pagination-info
+                  span.ng-binding 共有{{total}}条,
+                  span.ng-binding 每页显示：{{size}}条
+                uib-pagination.pagination-sm(boundary-links='true', total-items='total', ng-model='current', max-size='10', ng-change='search(true)', items-per-page='size', previous-text='‹', next-text='›', first-text='«', last-text='»')

@@ -1,0 +1,32 @@
+{
+  "domain": "http://localhost",
+  "port": 3000,
+  "cachify": false,
+  "assets": {
+    "/vendor/bootstrap/dist/css/bootstrap.css": [
+      "/components/bootstrap/dist/css/bootstrap.css"
+    ],
+    "/css/console.min.css": [
+      "/css/dashboard.css",
+      "/css/console.css"
+    ],
+    "/vendor/library.min.js": [
+      "/components/jquery/dist/jquery.js",
+      "/components/angular/angular.min.js",
+      "/components/angular-route/angular-route.min.js",
+      "/components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+      "/components/remarkable-bootstrap-notify/bootstrap-notify.min.js"
+    ],
+    "/js/site.min.js": [
+      "/js/controllers/consolecontrollers.js",
+      "/js/controllers/userscontrollers.js",
+      "/js/controllers/rolescontrollers.js",
+      "/js/controllers/functionscontrollers.js",
+      "/js/directives/directives.js",
+      "/js/filters/filters.js",
+      "/js/services/lang_cn.js",
+      "/js/services/services.js",
+      "/js/site.js"
+    ]
+  }
+}

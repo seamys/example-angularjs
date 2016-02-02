@@ -1,0 +1,10 @@
+{
+    "name":"angularjs-example",
+    "main":[
+        "./public/css/style.css",
+        "./public/js/site.js"
+    ],
+    "dependencies":{
+        "angular-bootstrap":"*"
+    }
+}

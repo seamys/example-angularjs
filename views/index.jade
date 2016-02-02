@@ -1,0 +1,34 @@
+doctype
+html(ng-app="Yiim")
+	head
+		meta(name="viewport" content="width=device-width")
+		include includes/head
+	body(ng-controller="navigation")
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="/")= title
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav.navbar-left
+						li(class="{{item.isActive?'active':''}}" ng-repeat="item in ls")
+							a(href="#{{item.urls[0].link}}") {{item.name}}
+					.navbar-form.navbar-right
+						a.btn.btn-danger(href="/") {{lang.exit}}
+		.container-fluid
+			.row
+				.col-sm-3.col-md-2.sidebar
+					ul.nav.nav-sidebar
+						li(class="{{item.isActive?'active':''}}" ng-repeat="item in urls")
+							a(href="#{{item.link}}") {{item.title}}
+				.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+					div(ng-view)
+
+		| !{cachify_js('/js/site.min.js')}
+		block scripts
+
+

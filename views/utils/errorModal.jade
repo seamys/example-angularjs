@@ -1,0 +1,6 @@
+﻿.modal-header
+    h3.modal-title 服务器异常
+.modal-body.text-danger {{ExceptionMessage||Message}}
+.modal-footer
+    button.btn.btn-primary(ng-click='report()') 报告错误
+    button.btn.btn-warning(ng-click='cancel()') 取消

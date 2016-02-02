@@ -1,46 +1,45 @@
-# example-angularjs
-angularjs+WebAPI 演示项目
+# angularjs-example
 
-##基本功能演示(二)
-非常抱歉这个月实在太忙，一直拖到现在。今天演示部分demo功能。
-整个demo 实际上只花了1天时间。
-稍后会逐步介绍这个项目的前端结构
-你可以在这个网站  [http://angularjs.frllk.com](http://angularjs.frllk.com) 测试这些功能。
-代码托管在 Github 
+The best project ever.
 
-下载地址：https://github.com/seamys/example-angularjs
-演示地址：http://angularjs.frllk.com 
-###2.1 权限 删除，行内编辑和添加
+These project include:
 
-![](http://images0.cnblogs.com/blog2015/329473/201507/282357379063666.gif)
+* [connect-cachify](https://github.com/mozilla/connect-cachify)
+* [twitter bootstrap](http://twitter.github.com/bootstrap/)
+* [JQuery](http://jquery.com/)
+* [bower](http://twitter.github.com/bower/)
+* [jade](http://jade-lang.com/)
+* [winston-request-logger](https://github.com/wolfeidau/winston-request-logger)
 
-演示地址：http://angularjs.frllk.com/#/functions/list
-###2.2 添加一个角色，并且关联权限
-![](http://images0.cnblogs.com/blog2015/329473/201507/282357449696973.gif)
 
-演示地址：http://localhost:53682/#/roles/list
+## Getting Started
 
-###3.3 添加用户，并且关联角色
+Once created you can set up your web application project by running the following commands.
 
-![](http://images0.cnblogs.com/blog2015/329473/201507/282357493759928.gif)
+* Firstly run npm to install modules.
 
-演示地址：http://angularjs.frllk.com/#/users/form/
+```
+npm install
+```
 
-###3.4 编辑角色，角色删除，删除关联功能
+* Run bower to install UI dependencies.
 
-![](http://images0.cnblogs.com/blog2015/329473/201507/282357551883952.gif)
+```
+bower install
+```
 
-演示地址：http://angularjs.frllk.com/#/roles/list
+* Start the application.
 
-###3.5 编辑用户信息，编辑关联角色
+```
+node app.js
+```
 
-![](http://images0.cnblogs.com/blog2015/329473/201507/282358015949861.gif)
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
 
-演示地址：http://angularjs.frllk.com/#/users/list
+## Release History
+_(Nothing yet)_
 
-###3.6 简单搜索演示
-
-![](http://images0.cnblogs.com/blog2015/329473/201507/282358108752228.gif)
-
-演示地址：http://angularjs.frllk.com/#/users/list
-
+## License
+Copyright (c) 2016 高国海
+Licensed under the MIT license.
