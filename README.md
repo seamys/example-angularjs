@@ -1,6 +1,6 @@
 # angularjs-example
 
-The best project ever.
+Writing an AngularJS App with an Express + Node.js 
 
 These project include:
 
@@ -41,5 +41,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2016 高国海
+Copyright (c) 2016 seamys
 Licensed under the MIT license.
