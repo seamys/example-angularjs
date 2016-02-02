@@ -1,0 +1,18 @@
+﻿<div class="col-lg-6" style="padding-left:0">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th class="col-sm-2">{{lang.roleName}}</th>
+                <th>{{lang.func}}</th>
+                <th class="col-sm-1"><button ng-click="append()" class="btn btn-primary btn-xs">{{lang.create}}</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in model.Roles">
+                <td>{{item.Name}}</td>
+                <td><a href="javascript:;" ng-click="viewFunctions()">{{item.Funs|merge:'Name':100:'...'|none:lang.none}}({{(item.Funs||[]).length}})</a></td>
+                <td><button class="btn btn-danger btn-xs" ng-click="remove(item)">{{lang.remove}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
