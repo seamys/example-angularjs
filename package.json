@@ -30,13 +30,15 @@
   },
   "dependencies": {
     "connect-cachify": "*",
-    "winston": "*",
-    "winston-request-logger": "*",
-    "jade": "*",
-    "nconf": "*",
+    "errorhandler": "^1.4.3",
     "express": "*",
+    "jade": "*",
+    "lowdb": "^0.12.2",
+    "nconf": "*",
     "uglify-js": "*",
-    "uglifycss": "*"
+    "uglifycss": "*",
+    "winston": "*",
+    "winston-request-logger": "*"
   },
   "devDependencies": {
     "grunt-simple-mocha": "~0.2.0",

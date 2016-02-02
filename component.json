@@ -1,10 +1,12 @@
 {
-    "name":"angularjs-example",
-    "main":[
-        "./public/css/style.css",
-        "./public/js/site.js"
-    ],
-    "dependencies":{
-        "angular-bootstrap":"*"
-    }
+  "name": "angularjs-example",
+  "main": [
+    "./public/css/style.css",
+    "./public/js/site.js"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^1.1.2",
+    "angular-route": "^1.4.9",
+    "remarkable-bootstrap-notify": "^3.1.3"
+  }
 }
