@@ -17,44 +17,46 @@
         });
         return links;
     }]);
-    service.factory("http", ['$http', '$uibModal', 'utils', 'language', function ($http, $uibModal, utils, language) {
-        var lang = language(true);
-        var methods = {
-            'call': function (type, url, params, data) {
-                return $http({ method: type, url: url, params: params, data: data }).success(methods.success).error(methods.errorModal);
-            },
-            'success': function (data) {
-                if (data.Message)
-                    utils.confirm({ msg: lang[data.Message], ok: lang.ok });
-                return data;
-            },
-            'errorModal': function (data) {
-                $uibModal.open({
-                    templateUrl: 'utils-errorModal ',
-                    backdrop: "static",
-                    controller: "errorModal",
-                    resolve: {
-                        error: function () {
-                            return data;
+    service.factory("http", [
+        '$http', '$uibModal', 'utils', 'language', function ($http, $uibModal, utils, language) {
+            var lang = language(true);
+            var methods = {
+                'call': function (type, url, params, data) {
+                    return $http({ method: type, url: url, params: params, data: data }).success(methods.success).error(methods.errorModal);
+                },
+                'success': function (data) {
+                    if (data.Message)
+                        utils.confirm({ msg: lang[data.Message], ok: lang.ok });
+                    return data;
+                },
+                'errorModal': function (data) {
+                    $uibModal.open({
+                        templateUrl: 'utils-errorModal ',
+                        backdrop: "static",
+                        controller: "errorModal",
+                        resolve: {
+                            error: function () {
+                                return data;
+                            }
                         }
-                    }
-                });
-            },
-            'get': function (url, params) {
-                return methods.call('GET', url, params);
-            },
-            'put': function (url, data) {
-                return methods.call('PUT', url, null, data);
-            },
-            'post': function (url, data) {
-                return methods.call('POST', url, null, data);
-            },
-            'delete': function (url, data) {
-                return methods.call('DELETE', url, data, null);
+                    });
+                },
+                'get': function (url, params) {
+                    return methods.call('GET', url, params);
+                },
+                'put': function (url, data) {
+                    return methods.call('PUT', url, null, data);
+                },
+                'post': function (url, data) {
+                    return methods.call('POST', url, null, data);
+                },
+                'delete': function (url, data) {
+                    return methods.call('DELETE', url, data, null);
+                }
             }
+            return methods;
         }
-        return methods;
-    }])
+    ]);
     service.factory("utils", ["$http", '$uibModal', function ($http, $uibModal) {
         var methods = {
             confirm: function (text) {
@@ -110,16 +112,16 @@
                     return http.get("/users/" + id);
                 },
                 "put": function (param) {
-                    return http.put("/users/", param);
+                    return http.put("/users/" + param.Id, param);
                 },
                 "post": function (param) {
                     return http.post("/users/", param);
                 },
-                "putRoles": function (params) {
-                    return http.put("/users/", params);
+                "putRoles": function (id, params) {
+                    return http.put("/users/" + id + "/roles", params);
                 },
                 "deleteRole": function (id, roleId) {
-                    return http.delete("/users/", { id: id, roleId: roleId });
+                    return http.delete("/users/" + id + "/roles/" + roleId);
                 }
             }
         };
@@ -128,14 +130,17 @@
     service.factory("rolesService", ["http", function (http) {
         var methods = {
             list: {
-                "gets": function (param) {
+                "get": function (param) {
                     return http.get("/users/" + param.UserId + "/roles");
+                },
+                "gets": function (param) {
+                    return http.get("/roles/", param);
                 },
                 "post": function (param) {
                     return http.post("/roles/", param);
                 },
                 "put": function (param) {
-                    return http.put("/roles/", param);
+                    return http.put("/roles/" + param.Id, param);
                 },
                 "delete": function (id) {
                     return http.delete("/roles/" + id);

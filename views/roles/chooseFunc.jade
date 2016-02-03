@@ -24,7 +24,7 @@
       tr
         td(colspan="4")
           .pull-right
-            pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")
+            uib-pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")
 .modal-footer
   button.btn.btn-primary(ng-click="ok()") {{lang.ok}}
   button.btn.btn-warning(ng-click="cancel()") {{lang.cancel}}

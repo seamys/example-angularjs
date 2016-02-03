@@ -1,9 +1,12 @@
-var express = require('express'),
-    configurations = module.exports,
-    app = express(),
-    nconf = require('nconf'),
-    winston = require('winston'),
-    errorhandler = require('errorhandler');
+var express = require('express');
+var bodyParser = require('body-parser');
+var nconf = require('nconf');
+var winston = require('winston');
+var errorhandler = require('errorhandler');
+
+var app = express();
+var configurations = module.exports;
+
 
 // Logging
 var logger = new (winston.Logger)({ transports: [new (winston.transports.Console)({ colorize: true })] });

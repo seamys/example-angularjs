@@ -18,21 +18,21 @@
       tbody(ng-show="!loadingState")
         tr.pointer(ng-click="checked(item)", ng-repeat="item in list")
           td(ng-if="!item.isModified") {{item.Name}}
-          td(ng-if="!item.isModified") {{item.Funs|merge:"Name":7:"..."|none:lang.none}}
+          td(ng-if="!item.isModified") {{item.Functions|merge:"Name":7:"..."|none:lang.none}}
           td(ng-if="!item.isModified")
             button.btn.btn-danger.btn-xs(ng-click="remove(item)") {{lang.remove}}
             button.btn.btn-success.btn-xs(ng-click="edit(item)") {{lang.edit}}
           td(ng-if="item.isModified")
             input.form-control(type="text", ng-model="item.Name")
           td(ng-if="item.isModified")
-            input.form-control(type="text", ng-click="change(item)", value="{{item.Funs|merge:'Name':7:'...'}}")
+            input.form-control(type="text", ng-click="change(item)", value="{{item.Functions|merge:'Name':7:'...'}}")
           td(ng-if="item.isModified")
             button.btn.btn-danger.btn-xs(ng-click="cancel(item)") {{lang.cancel}}
             button.btn.btn-success.btn-xs(ng-click="save(item)") {{lang.save}}
         tbody(ng-if="loadingState")
           tr
             td.text-center(colspan="8")
-              img(width="60", src="/App/images/loading.gif")
+              img(width="60", src="/images/loading.gif")
         tfoot(ng-show="!loadingState")
           tr
             td(colspan="4")
@@ -40,4 +40,4 @@
                 .pagination-info
                   span.ng-binding 共有{{total}}条
                   span.ng-binding 每页显示：{{size}}条
-                pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")
+                uib-pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")

@@ -19,14 +19,14 @@
         td
           input(type="checkbox", ng-checked="item.isChecked")
         td {{item.Name}}
-        td {{item.Funs|merge:"Name":7:"..."|none:"未关联角色"}}
+        td {{item.Functions|merge:"Name":7:"..."|none:"未关联角色"}}
         td
           button.btn.btn-danger.btn-xs 选择
     tfoot
       tr
         td(colspan="4")
           .pull-right
-            pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")
+            uib-pagination.pagination-sm(boundary-links="true", total-items="total", ng-model="current", max-size="10", ng-change="search(true)", items-per-page="size", previous-text="‹", next-text="›", first-text="«", last-text="»")
 .modal-footer
   button.btn.btn-primary(ng-click="ok()") {{lang.save}}
   button.btn.btn-warning(ng-click="cancel()") {{lang.cancel}}

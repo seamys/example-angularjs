@@ -10,6 +10,6 @@
       tr(ng-repeat="item in model.Roles")
         td {{item.Name}}
         td
-          a(href="javascript:;", ng-click="viewFunctions()") {{item.Funs|merge:"Name":100:"..."|none:lang.none}}({{(item.Funs||[]).length}})
+          a(href="javascript:;", ng-click="viewFunctions()") {{item.Functions|merge:"Name":100:"..."|none:lang.none}}({{(item.Funs||[]).length}})
         td
           button.btn.btn-danger.btn-xs(ng-click="remove(item)") {{lang.remove}}

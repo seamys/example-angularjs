@@ -29,6 +29,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "body-parser": "^1.14.2",
     "connect-cachify": "*",
     "errorhandler": "^1.4.3",
     "express": "*",

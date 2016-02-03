@@ -1,7 +1,8 @@
 module.exports = function (app) {
     var users = require("../lib/users");
     var utils = require("../lib/utils");
-
+    var roles = require('../lib/roles');
+    var funcs = require('../lib/funcs');
     /**
      * default url render index.html
      */
@@ -26,13 +27,39 @@ module.exports = function (app) {
         res.send(users.post(req.body));
     });
     app.put('/users/:id', function (req, res) {
-        res.send(users.put(req.body, req.params.id));
+        var body = req.body;
+        var param = {
+            State: body.State - 0,
+            RealName: body.RealName,
+            Email: body.Email,
+            Name: body.Name
+        }
+        res.send(users.put(param, req.params.id));
     });
-    app.delete('/users', function (req, res) {
-        res.send(users.delete(req.params.id));
+    app.delete('/users/:id', function (req, res) {
+        res.send(users.remove(req.params.id));
     });
 
     app.get('/users/:user/roles', function (req, res) {
         res.send(users.roles(req.params.user || 0));
+    });
+    app.put('/users/:user/roles', function (req, res) {
+        res.send(users.putRoles(req.params.user || 0, req.body));
+    });
+
+    app.delete('/users/:user/roles/:role', function (req, res) {
+        res.send(users.deleteRoles(req.params));
+    });
+
+    app.get('/roles/', function (req, res) {
+        var params = utils.format(req.query);
+        res.send(roles.getList(params));
+    });
+    app.put('/roles/:id', function (req, res) {
+        res.send(roles.put(req.body.id, body));
+    });
+    app.get('/functions/', function (req, res) {
+        var params = utils.format(req.query);
+        res.send(funcs.get(params));
     });
 }
