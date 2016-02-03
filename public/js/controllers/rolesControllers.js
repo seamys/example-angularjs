@@ -9,8 +9,8 @@
                 $scope.loadingState = true;
                 if (!isPage) $scope.current = 1;
                 service.gets({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
-                    $scope.list = data.Data;
-                    $scope.total = data.Total;
+                    $scope.list = data;
+                    $scope.total = data.length;
                     $scope.loadingState = false;
                 });
             },
@@ -26,7 +26,7 @@
                 var org = item.org;
                 delete item.org;
                 angular.extend(item, org);
-                item.isModified = false
+                item.isModified = false;
             },
             change: function (item) {
                 $uibModal.open({

@@ -944,219 +944,511 @@
   "roles": [
     {
       "Id": 7,
-      "Name": "管理员"
+      "Name": "管理员",
+      "Functions": [ 30, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 45, 46, 48, 49, 53, 54, 50, 51, 52, 37, 38, 39, 40, 41, 42 ]
     },
     {
       "Id": 9,
-      "Name": "普通用户"
+      "Name": "普通用户",
+      "Functions": [ 30 ]
     },
     {
       "Id": 10,
-      "Name": "dfg"
+      "Name": "dfg",
+      "Functions": [ 26 ]
     },
     {
       "Id": 11,
-      "Name": "fffffffffffffffffffffffffffffff"
+      "Name": "fffffffffffffffffffffffffffffff",
+      "Functions": [ 18, 20, 17 ]
     },
     {
       "Id": 12,
-      "Name": "xxxc"
+      "Name": "xxxc",
+      "Functions": [ 18, 21, 22, 14, 13, 12, 11, 30, 31, 32, 34, 33, 35, 36, 37, 39, 38 ]
     },
     {
       "Id": 13,
-      "Name": "ddd"
+      "Name": "ddd",
+      "Functions": [ 19, 1, 24, 22, 13 ]
     },
     {
       "Id": 14,
-      "Name": "小二"
+      "Name": "小二",
+      "Functions": [ 19, 18, 17, 16, 21, 20, 38 ]
     },
     {
       "Id": 15,
-      "Name": "施工队v型"
+      "Name": "施工队v型",
+      "Functions": [ 22, 19, 23 ]
     },
     {
       "Id": 16,
-      "Name": "大富翁"
+      "Name": "大富翁",
+      "Functions": [ 23, 24, 25, 22, 21, 20, 19, 18, 16, 17, 15, 14, 13, 12, 11, 1, 27 ]
     },
     {
       "Id": 17,
-      "Name": "haha"
+      "Name": "haha",
+      "Functions": [ 27, 26, 25 ]
     },
     {
       "Id": 18,
-      "Name": "11"
+      "Name": "11",
+      "Functions": [ 28, 27, 26, 25, 24 ]
     },
     {
       "Id": 19,
-      "Name": "11111"
+      "Name": "11111",
+      "Functions": [ 28, 27, 25 ]
     },
     {
       "Id": 20,
-      "Name": "22333"
+      "Name": "22333",
+      "Functions": [ 27 ]
     },
     {
       "Id": 21,
-      "Name": "saaaaaa"
+      "Name": "saaaaaa",
+      "Functions": [ 26, 25 ]
     },
     {
       "Id": 22,
-      "Name": "asGDSSD"
+      "Name": "asGDSSD",
+      "Functions": [ 27, 28, 30, 31, 26, 25, 24 ]
     },
     {
       "Id": 23,
-      "Name": "aaaaaa"
+      "Name": "aaaaaa",
+      "Functions": [ 20, 19, 18, 30, 28, 29 ]
     },
     {
       "Id": 24,
-      "Name": "担当的111"
+      "Name": "担当的111",
+      "Functions": [ 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 31, 37, 35 ]
     },
     {
       "Id": 25,
-      "Name": "1111111111111111111"
+      "Name": "1111111111111111111",
+      "Functions": [ 35, 34, 33, 32, 31, 30, 29, 28, 26, 25, 24, 27 ]
     },
     {
       "Id": 26,
-      "Name": "vb"
+      "Name": "vb",
+      "Functions": [ 33, 32, 24, 25, 26, 34 ]
     },
     {
       "Id": 27,
-      "Name": "C#"
+      "Name": "C#",
+      "Functions": [ 29, 19, 22, 20, 28, 37, 39, 35, 42, 41, 40, 34, 33 ]
     },
     {
       "Id": 28,
-      "Name": "测"
+      "Name": "测",
+      "Functions": [ 40, 39, 38 ]
     },
     {
       "Id": 29,
-      "Name": "test"
+      "Name": "test",
+      "Functions": [ 35, 36, 40, 39, 38, 37, 34, 33, 32, 31 ]
     },
     {
       "Id": 30,
-      "Name": "111"
+      "Name": "111",
+      "Functions": [ 40, 39, 38, 37, 36 ]
     },
     {
       "Id": 31,
-      "Name": "66"
+      "Name": "66",
+      "Functions": [ 41, 35, 38, 40, 39, 37, 36, 34, 33 ]
     },
     {
       "Id": 32,
-      "Name": "123"
+      "Name": "123",
+      "Functions": [ 41, 40, 42, 13 ]
     },
     {
       "Id": 33,
-      "Name": "12312"
+      "Name": "12312",
+      "Functions": [ 40, 38 ]
     },
     {
       "Id": 34,
-      "Name": "22222222"
+      "Name": "22222222",
+      "Functions": [ 42, 41, 40, 39, 38, 37, 33 ]
     },
     {
       "Id": 35,
-      "Name": "擦擦擦v"
+      "Name": "擦擦擦v",
+      "Functions": [ 40, 35, 33, 12 ]
     },
     {
       "Id": 36,
-      "Name": "1112"
+      "Name": "1112",
+      "Functions": [ 43, 40, 39 ]
     },
     {
       "Id": 37,
-      "Name": "测试"
+      "Name": "测试",
+      "Functions": [ 43, 42, 37 ]
     },
     {
       "Id": 38,
-      "Name": "海叔"
+      "Name": "海叔",
+      "Functions": [ 38, 37, 40, 42, 43 ]
     },
     {
       "Id": 39,
-      "Name": "11l"
+      "Name": "11l",
+      "Functions": [ 38, 39, 41, 42, 31, 32, 37 ]
     },
     {
       "Id": 40,
-      "Name": "ff32"
+      "Name": "ff32",
+      "Functions": [ 36, 34, 20, 19, 1, 11, 29 ]
     },
     {
       "Id": 41,
-      "Name": "a"
+      "Name": "a",
+      "Functions": [ 29, 36, 35 ]
     },
     {
       "Id": 42,
-      "Name": "yyf"
+      "Name": "yyf",
+      "Functions": [ 46, 45, 48 ]
     },
     {
       "Id": 43,
-      "Name": "更"
+      "Name": "更",
+      "Functions": [ 44, 39, 38 ]
     },
     {
       "Id": 44,
-      "Name": "testddd"
+      "Name": "testddd",
+      "Functions": [ 48, 47, 49 ]
     },
     {
       "Id": 45,
-      "Name": "到此一游"
+      "Name": "到此一游",
+      "Functions": [ 48, 47, 46, 44, 45, 43, 42, 41, 40, 49 ]
     },
     {
       "Id": 46,
-      "Name": "wwww"
+      "Name": "wwww",
+      "Functions": [ 49, 34 ]
     },
     {
       "Id": 47,
-      "Name": "34"
+      "Name": "34",
+      "Functions": [ 49, 48 ]
     },
     {
       "Id": 48,
-      "Name": "abc"
+      "Name": "abc",
+      "Functions": [ 49, 47, 46, 48 ]
     },
     {
       "Id": 49,
-      "Name": "aqwewqe"
+      "Name": "aqwewqe",
+      "Functions": [ 47 ]
     },
     {
       "Id": 50,
-      "Name": "123444"
+      "Name": "123444",
+      "Functions": [ 49 ]
     },
     {
       "Id": 51,
-      "Name": "trer"
+      "Name": "trer",
+      "Functions": [ 52 ]
     },
     {
       "Id": 52,
-      "Name": "asdf"
+      "Name": "asdf",
+      "Functions": [ 53 ]
     },
     {
       "Id": 53,
-      "Name": "逗逼TV"
+      "Name": "逗逼TV",
+      "Functions": [ 53, 54, 51, 50 ]
     },
     {
       "Id": 54,
-      "Name": "编辑"
+      "Name": "编辑",
+      "Functions": [ 54, 47 ]
     },
     {
       "Id": 55,
-      "Name": "下次"
+      "Name": "下次",
+      "Functions": [ 53, 51, 49, 12, 15, 56, 55, 54 ]
     },
     {
       "Id": 56,
-      "Name": "xxyy"
+      "Name": "xxyy",
+      "Functions": [ 15 ]
     },
     {
       "Id": 57,
-      "Name": "superadmin"
+      "Name": "superadmin",
+      "Functions": [ 58, 51, 42, 54, 53, 52, 50, 49, 39, 57, 56, 55, 60 ]
     },
     {
       "Id": 58,
-      "Name": "田"
+      "Name": "田",
+      "Functions": [ 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52 ]
     },
     {
       "Id": 59,
-      "Name": "wty"
+      "Name": "wty",
+      "Functions": [ 55, 64, 63, 62, 65 ]
     },
     {
       "Id": 60,
-      "Name": "123456"
+      "Name": "123456",
+      "Functions": [ 68, 67, 66, 65, 64 ]
     },
     {
       "Id": 61,
-      "Name": "管理员33"
+      "Name": "管理员33",
+      "Functions": [ 16 ]
+    }
+  ],
+  "func": [
+    {
+      "Id": 1,
+      "Name": "添加新闻27987"
+    },
+    {
+      "Id": 11,
+      "Name": "dfd"
+    },
+    {
+      "Id": 12,
+      "Name": "1111"
+    },
+    {
+      "Id": 13,
+      "Name": "ffffffffff"
+    },
+    {
+      "Id": 14,
+      "Name": "fff"
+    },
+    {
+      "Id": 15,
+      "Name": "sdfvv"
+    },
+    {
+      "Id": 16,
+      "Name": "sdfvfvvvv"
+    },
+    {
+      "Id": 17,
+      "Name": "fgbfgbdfb"
+    },
+    {
+      "Id": 18,
+      "Name": "677"
+    },
+    {
+      "Id": 19,
+      "Name": "dvdfbbbb1222"
+    },
+    {
+      "Id": 20,
+      "Name": "gbhhhhhhhhaaaaa"
+    },
+    {
+      "Id": 21,
+      "Name": "ghjnhnnnnnnn"
+    },
+    {
+      "Id": 22,
+      "Name": "767676"
+    },
+    {
+      "Id": 23,
+      "Name": "计划"
+    },
+    {
+      "Id": 24,
+      "Name": "发过"
+    },
+    {
+      "Id": 25,
+      "Name": "123"
+    },
+    {
+      "Id": 26,
+      "Name": "】】a"
+    },
+    {
+      "Id": 27,
+      "Name": "aaaaaa"
+    },
+    {
+      "Id": 28,
+      "Name": "88"
+    },
+    {
+      "Id": 29,
+      "Name": "23234"
+    },
+    {
+      "Id": 30,
+      "Name": "测试权限"
+    },
+    {
+      "Id": 31,
+      "Name": "ddd"
+    },
+    {
+      "Id": 32,
+      "Name": "qqq赶快回家"
+    },
+    {
+      "Id": 33,
+      "Name": "555"
+    },
+    {
+      "Id": 34,
+      "Name": "333"
+    },
+    {
+      "Id": 35,
+      "Name": "11"
+    },
+    {
+      "Id": 36,
+      "Name": "哦哦哦"
+    },
+    {
+      "Id": 37,
+      "Name": "jhklff"
+    },
+    {
+      "Id": 38,
+      "Name": "方法3"
+    },
+    {
+      "Id": 39,
+      "Name": "sdf sdf asf教正赶不上趟"
+    },
+    {
+      "Id": 40,
+      "Name": "sdfsdfds654344ty6654111"
+    },
+    {
+      "Id": 41,
+      "Name": "添加用ghhg"
+    },
+    {
+      "Id": 42,
+      "Name": "213213"
+    },
+    {
+      "Id": 43,
+      "Name": "6966"
+    },
+    {
+      "Id": 44,
+      "Name": "44444水电费"
+    },
+    {
+      "Id": 45,
+      "Name": "a"
+    },
+    {
+      "Id": 46,
+      "Name": "8778"
+    },
+    {
+      "Id": 47,
+      "Name": "dd"
+    },
+    {
+      "Id": 48,
+      "Name": "u555"
+    },
+    {
+      "Id": 49,
+      "Name": "fdsa1wertyjj"
+    },
+    {
+      "Id": 50,
+      "Name": "]]]]"
+    },
+    {
+      "Id": 51,
+      "Name": "dfghjkl"
+    },
+    {
+      "Id": 52,
+      "Name": "vvc"
+    },
+    {
+      "Id": 53,
+      "Name": "qreqw"
+    },
+    {
+      "Id": 54,
+      "Name": "aaaa"
+    },
+    {
+      "Id": 55,
+      "Name": "yy"
+    },
+    {
+      "Id": 56,
+      "Name": "bb"
+    },
+    {
+      "Id": 57,
+      "Name": "asd产"
+    },
+    {
+      "Id": 58,
+      "Name": "编辑一切"
+    },
+    {
+      "Id": 59,
+      "Name": "什么权限2221111"
+    },
+    {
+      "Id": 60,
+      "Name": "g"
+    },
+    {
+      "Id": 61,
+      "Name": "ssssssddd"
+    },
+    {
+      "Id": 62,
+      "Name": "eee"
+    },
+    {
+      "Id": 63,
+      "Name": "tttt"
+    },
+    {
+      "Id": 64,
+      "Name": "shangl1uui"
+    },
+    {
+      "Id": 65,
+      "Name": "asdfage"
+    },
+    {
+      "Id": 66,
+      "Name": "aaa"
+    },
+    {
+      "Id": 67,
+      "Name": "bbb2313"
+    },
+    {
+      "Id": 68,
+      "Name": "说鬼斧神工发送到"
     }
   ]
 }

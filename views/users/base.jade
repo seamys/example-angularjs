@@ -15,11 +15,14 @@
     label.col-sm-1.control-label {{lang.state}}:
     .col-sm-3
       label.radio-inline
-        input(type="radio", name="state", ng-model="model.State", value="1") {{lang.active}}
+        input(type="radio", name="state", ng-model="model.State", value="1")
+        span {{lang.abandon}}
       label.radio-inline
-        input(type="radio", name="state", ng-model="model.State", value="2") {{lang.lock}}
+        input(type="radio", name="state", ng-model="model.State", value="2")
+        span {{lang.active}}
       label.radio-inline
-        input(type="radio", name="state", ng-model="model.State", value="3") {{lang.abandon}}
+        input(type="radio", name="state", ng-model="model.State", value="3")
+        span {{lang.lock}}
   .form-group.form-group-sm
     .col-lg-offset-1
       button.btn.btn-success(ng-click="save()") {{lang.save}}

@@ -106,8 +106,8 @@
                 }
             },
             form: {
-                "get": function (param) {
-                    return http.get("/users/", param);
+                "get": function (id) {
+                    return http.get("/users/" + id);
                 },
                 "put": function (param) {
                     return http.put("/users/", param);
@@ -116,7 +116,7 @@
                     return http.post("/users/", param);
                 },
                 "putRoles": function (params) {
-                    return http.put("/users/", params)
+                    return http.put("/users/", params);
                 },
                 "deleteRole": function (id, roleId) {
                     return http.delete("/users/", { id: id, roleId: roleId });
@@ -129,7 +129,7 @@
         var methods = {
             list: {
                 "gets": function (param) {
-                    return http.get("/roles/", param);
+                    return http.get("/users/" + param.UserId + "/roles");
                 },
                 "post": function (param) {
                     return http.post("/roles/", param);
