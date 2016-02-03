@@ -4,10 +4,10 @@ var nconf = require('nconf');
 var winston = require('winston');
 var errorhandler = require('errorhandler');
 
+//Create express type of variable app
 var app = express();
+
 var configurations = module.exports;
-
-
 // Logging
 var logger = new (winston.Logger)({ transports: [new (winston.transports.Console)({ colorize: true })] });
 
