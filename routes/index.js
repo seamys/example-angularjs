@@ -62,4 +62,7 @@ module.exports = function (app) {
         var params = utils.format(req.query);
         res.send(funcs.get(params));
     });
+    app.delete('/functions/:id', function (req, res) {
+        res.send(funcs.remove(req.params.id));
+    });
 }

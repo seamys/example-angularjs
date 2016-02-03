@@ -8,7 +8,7 @@
             search: function (isPage) {
                 if (!isPage) $scope.current = 1;
                 service.gets({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
-                    $scope.list = data.Data;
+                    $scope.list = data.List;
                     $scope.total = data.Total;
                 });
             },
