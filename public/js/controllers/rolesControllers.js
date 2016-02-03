@@ -48,7 +48,7 @@
                     }
                 });
                 if (has) return;
-                var obj = { "Funs": [], "Id": 0, "Name": "", "isModified": true };
+                var obj = { "Functions": [], "Id": 0, "Name": "", "isModified": true };
                 $scope.list.unshift(obj);
             },
             save: function (item) {
@@ -56,18 +56,18 @@
                     utils.notify(lang.notAllowEmpty, "warning");
                     return;
                 }
-                if (item.Id == 0) {
+                delete item.org;
+                if (!item.Id) {
                     service.post(item).success(function (data) {
-                        if (data.IsCreated) {
+                        if (data.state == 0) {
                             utils.notify(lang.saveSuccess, "success");
-                            item.Id = data.Id;
+                            item.Id = data.id;
                             item.isModified = false;
                         }
                     });
                 } else {
-                    delete item.org;
                     service.put(item).success(function (data) {
-                        if (data.IsSaved) {
+                        if (data.state == 0) {
                             utils.notify(lang.saveSuccess, "success");
                             item.isModified = false;
                         }
@@ -78,7 +78,7 @@
                 var modal = utils.confirm({ msg: lang.confirmDelete, ok: lang.ok, cancel: lang.cancel });
                 modal.result.then(function () {
                     service.delete(item.Id).success(function (data) {
-                        if (data.IsDeleted) {
+                        if (data.state == 0) {
                             utils.notify(lang.deleteSuccess, "success");
                             utils.remove($scope.list, item);
                         }
@@ -90,49 +90,47 @@
         angular.extend($scope, methods);
         methods.search();
     }]);
-    app.controller("chooseFunc", [
-        '$scope', "language", "funcsService", "utils", "$uibModalInstance", "params", function ($scope, language, funcsService, utils, $uibModalInstance, params) {
-            var service = funcsService.list;
-            var org = angular.copy(params.Functions);
-            var lang = language(true, "roleChoose");
-            var methods = {
-                lang: lang,
-                ok: function () {
-                    params.Functions = org;
-                    $uibModalInstance.close(true);
-                },
-                cancel: function () {
-                    $uibModalInstance.dismiss('cancel');
-                },
-                search: function (isPage) {
-                    if (!isPage) $scope.current = 1;
-                    service.gets({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
-                        angular.forEach(data.List, function (l) {
-                            angular.forEach(org, function (v) {
-                                if (l.Id == v.Id) {
-                                    l.isChecked = true;
-                                }
-                            });
+    app.controller("chooseFunc", ['$scope', "language", "funcsService", "utils", "$uibModalInstance", "params", function ($scope, language, funcsService, utils, $uibModalInstance, params) {
+        var service = funcsService.list;
+        var org = angular.copy(params.Functions);
+        var lang = language(true, "roleChoose");
+        var methods = {
+            lang: lang,
+            ok: function () {
+                params.Functions = org;
+                $uibModalInstance.close(true);
+            },
+            cancel: function () {
+                $uibModalInstance.dismiss('cancel');
+            },
+            search: function (isPage) {
+                if (!isPage) $scope.current = 1;
+                service.get({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
+                    angular.forEach(data.List, function (l) {
+                        angular.forEach(org, function (v) {
+                            if (l.Id == v.Id) {
+                                l.isChecked = true;
+                            }
                         });
-                        $scope.list = data.List;
-                        $scope.total = data.Total;
                     });
-                },
-                checked: function (item) {
-                    item.isChecked = !item.isChecked;
-                    if (!item.isChecked) {
-                        utils.remove(org, item, function (i, v) {
-                            return i.Id == v.Id;
-                        });
-                    } else {
-                        org.push(item);
-                    }
-                },
-                size: 10
+                    $scope.list = data.List;
+                    $scope.total = data.Total;
+                });
+            },
+            checked: function (item) {
+                item.isChecked = !item.isChecked;
+                if (!item.isChecked) {
+                    utils.remove(org, item, function (i, v) {
+                        return i.Id == v.Id;
+                    });
+                } else {
+                    org.push(item);
+                }
+            },
+            size: 10
 
-            }
-            angular.extend($scope, methods);
-            methods.search(false);
         }
-    ]);
+        angular.extend($scope, methods);
+        methods.search(false);
+    }]);
 })()

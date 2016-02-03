@@ -7,7 +7,7 @@
             lang: lang,
             search: function (isPage) {
                 if (!isPage) $scope.current = 1;
-                service.gets({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
+                service.get({ name: $scope.Name, current: $scope.current, size: $scope.size }).success(function (data) {
                     $scope.list = data.List;
                     $scope.total = data.Total;
                 });
@@ -42,9 +42,10 @@
                     utils.notify(lang.notAllowEmpty, "warning");
                     return;
                 }
+                delete item.org;
                 if (item.Id == 0) {
                     service.post(item).success(function (data) {
-                        if (data.IsCreated) {
+                        if (data.state == 0) {
                             utils.notify(lang.saveSuccess, "success");
                             item.Id = data.Id;
                             item.isModified = false;
@@ -52,7 +53,7 @@
                     });
                 } else {
                     service.put(item).success(function (data) {
-                        if (data.IsSaved) {
+                        if (data.state == 0) {
                             utils.notify(lang.saveSuccess, "success");
                             item.isModified = false;
                         }
@@ -63,7 +64,7 @@
                 var modal = utils.confirm({ msg: lang.confirmDelete, ok: lang.ok, cancel: lang.cancel });
                 modal.result.then(function () {
                     service.delete(item.Id).success(function (data) {
-                        if (data.IsDeleted) {
+                        if (data.state == 0) {
                             utils.notify(lang.deleteSuccess, "success");
                             utils.remove($scope.list, item);
                         }

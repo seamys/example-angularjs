@@ -6,7 +6,7 @@
     },
     {
       "name": "roles",
-      "max": 61
+      "max": 64
     },
     {
       "name": "funcs",
@@ -117,7 +117,7 @@
       "Password": "",
       "RealName": "bnghn",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 38,
@@ -213,7 +213,7 @@
       "Password": "",
       "RealName": "李恪",
       "State": 3,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 44,
@@ -289,7 +289,7 @@
       "Password": "",
       "RealName": "asdf",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 49,
@@ -333,7 +333,7 @@
       "Password": "",
       "RealName": "11afafasdf",
       "State": 2,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 52,
@@ -437,7 +437,7 @@
       "Password": "",
       "RealName": "test11",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 59,
@@ -509,7 +509,7 @@
       "Password": "",
       "RealName": "mzx87",
       "State": 3,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 64,
@@ -552,7 +552,7 @@
       "Password": "",
       "RealName": "fa",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 67,
@@ -563,7 +563,6 @@
       "RealName": "go11777",
       "State": 2,
       "Roles": [
-        27,
         26
       ]
     },
@@ -575,7 +574,7 @@
       "Password": "",
       "RealName": "a",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 69,
@@ -881,7 +880,7 @@
       "Password": "",
       "RealName": "1155",
       "State": 2,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 87,
@@ -912,7 +911,7 @@
       "Password": "",
       "RealName": "123123",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 89,
@@ -939,7 +938,7 @@
       "Password": "",
       "RealName": "2",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 91,
@@ -974,7 +973,7 @@
       "Password": "",
       "RealName": "234",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 93,
@@ -1072,7 +1071,7 @@
       "Password": "",
       "RealName": "323",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 98,
@@ -1100,7 +1099,7 @@
       "Password": "",
       "RealName": "23",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 100,
@@ -1175,7 +1174,7 @@
       "Password": "",
       "RealName": "dsdsdssdd",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 104,
@@ -1185,7 +1184,7 @@
       "Password": "",
       "RealName": "大的刚刚",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 105,
@@ -1195,7 +1194,7 @@
       "Password": "",
       "RealName": "凤飞飞",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 106,
@@ -1205,7 +1204,7 @@
       "Password": "",
       "RealName": "ddd",
       "State": 2,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 107,
@@ -1215,7 +1214,7 @@
       "Password": "",
       "RealName": "ddd3vcc",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 108,
@@ -1239,7 +1238,7 @@
       "Password": "",
       "RealName": "11",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 110,
@@ -1345,7 +1344,7 @@
       "Password": "",
       "RealName": "3",
       "State": 1,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 115,
@@ -1462,7 +1461,7 @@
       "Password": "",
       "RealName": "单独",
       "State": 0,
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 123,
@@ -1506,7 +1505,7 @@
       "Password": "",
       "RealName": "seamys",
       "State": "2",
-      "Roles": [ ]
+      "Roles": []
     },
     {
       "Id": 128,
@@ -1517,11 +1516,8 @@
       "RealName": "frllk",
       "State": "1",
       "Roles": [
-        55,
         56,
-        54,
-        52,
-        53
+        54
       ]
     }
   ],
@@ -1700,8 +1696,13 @@
       "Id": 21,
       "Name": "saaaaaa",
       "Functions": [
-        26,
-        25
+        25,
+        63,
+        61,
+        58,
+        56,
+        59,
+        60
       ]
     },
     {
@@ -1870,13 +1871,9 @@
       "Id": 34,
       "Name": "22222222",
       "Functions": [
-        42,
-        41,
-        40,
-        39,
-        38,
-        37,
-        33
+        59,
+        60,
+        62
       ]
     },
     {
@@ -1922,13 +1919,13 @@
       "Id": 39,
       "Name": "11l",
       "Functions": [
+        31,
+        32,
+        37,
         38,
         39,
         41,
-        42,
-        31,
-        32,
-        37
+        42
       ]
     },
     {
@@ -1949,8 +1946,11 @@
       "Name": "a",
       "Functions": [
         29,
+        35,
         36,
-        35
+        60,
+        61,
+        62
       ]
     },
     {
@@ -2054,10 +2054,15 @@
       "Id": 53,
       "Name": "逗逼TV",
       "Functions": [
+        50,
+        51,
         53,
         54,
-        51,
-        50
+        64,
+        63,
+        61,
+        59,
+        58
       ]
     },
     {
@@ -2127,17 +2132,6 @@
       ]
     },
     {
-      "Id": 59,
-      "Name": "wty",
-      "Functions": [
-        55,
-        64,
-        63,
-        62,
-        65
-      ]
-    },
-    {
       "Id": 60,
       "Name": "123456",
       "Functions": [
@@ -2149,11 +2143,23 @@
       ]
     },
     {
-      "Id": 61,
-      "Name": "管理员33",
       "Functions": [
-        16
-      ]
+        65,
+        64,
+        62,
+        61
+      ],
+      "Id": 62,
+      "Name": "APC"
+    },
+    {
+      "Id": 64,
+      "Functions": [
+        65,
+        64,
+        58
+      ],
+      "Name": "APC-2"
     }
   ],
   "funcs": [
@@ -2220,10 +2226,6 @@
     {
       "Id": 25,
       "Name": "123"
-    },
-    {
-      "Id": 26,
-      "Name": "】】a"
     },
     {
       "Id": 27,
@@ -2346,14 +2348,6 @@
       "Name": "bb"
     },
     {
-      "Id": 57,
-      "Name": "asd产"
-    },
-    {
-      "Id": 58,
-      "Name": "编辑一切"
-    },
-    {
       "Id": 59,
       "Name": "什么权限2221111"
     },
@@ -2367,7 +2361,7 @@
     },
     {
       "Id": 62,
-      "Name": "eee"
+      "Name": "添加书本2"
     },
     {
       "Id": 63,
@@ -2383,15 +2377,7 @@
     },
     {
       "Id": 66,
-      "Name": "aaa"
-    },
-    {
-      "Id": 67,
-      "Name": "bbb2313"
-    },
-    {
-      "Id": 68,
-      "Name": "说鬼斧神工发送到"
+      "Name": "添加书本"
     }
   ]
 }

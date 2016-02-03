@@ -152,11 +152,11 @@
     service.factory("funcsService", ["http", function (http) {
         var methods = {
             list: {
-                "gets": function (params) {
+                "get": function (params) {
                     return http.get("/functions/", params);
                 },
                 "put": function (params) {
-                    return http.put("/functions/", params);
+                    return http.put("/functions/" + params.Id, params);
                 },
                 "post": function (params) {
                     return http.post("/functions/", params);

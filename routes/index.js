@@ -15,7 +15,6 @@ module.exports = function (app) {
     app.get('/:dir-:name', function (req, res) {
         res.render(req.params.dir + "/" + req.params.name);
     });
-
     app.get('/users', function (req, res) {
         var params = utils.format(req.query);
         res.send(users.get(params));
@@ -39,28 +38,34 @@ module.exports = function (app) {
     app.delete('/users/:id', function (req, res) {
         res.send(users.remove(req.params.id));
     });
-
     app.get('/users/:user/roles', function (req, res) {
         res.send(users.roles(req.params.user || 0));
     });
     app.put('/users/:user/roles', function (req, res) {
         res.send(users.putRoles(req.params.user || 0, req.body));
     });
-
     app.delete('/users/:user/roles/:role', function (req, res) {
         res.send(users.deleteRoles(req.params));
     });
-
     app.get('/roles/', function (req, res) {
         var params = utils.format(req.query);
         res.send(roles.getList(params));
     });
+    app.post('/roles/', function (req, res) {
+        res.send(roles.post(req.body));
+    })
     app.put('/roles/:id', function (req, res) {
-        res.send(roles.put(req.body.id, body));
+        res.send(roles.put(req.params.id, req.body));
+    });
+    app.delete('/roles/:id', function (req, res) {
+        res.send(roles.remove(req.params.id));
     });
     app.get('/functions/', function (req, res) {
         var params = utils.format(req.query);
         res.send(funcs.get(params));
+    });
+    app.put('/functions/:id', function (req, res) {
+        res.send(funcs.put(req.params.id, req.body));
     });
     app.delete('/functions/:id', function (req, res) {
         res.send(funcs.remove(req.params.id));
