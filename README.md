@@ -2,8 +2,6 @@
 
 使用 Express + Node.js 构建 AngularJS Web应用。
 
-获取之前.NET Web API 版本. 将当前项目 clone 到本地。     
-
 包含其他项目:
 
 * [bower](http://twitter.github.com/bower/) 
