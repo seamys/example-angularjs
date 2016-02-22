@@ -8,6 +8,7 @@
 * [angular](https://angular.io/)
 * [angular-bootstrap](http://angular-ui.github.io/bootstrap/)
 * [jquery](http://jquery.com/)    
+* [expressjs](http://expressjs.com/)
 * [connect-cachify](https://github.com/mozilla/connect-cachify)
 * [twitter bootstrap](http://twitter.github.com/bootstrap/)
 * [jade](http://jade-lang.com/)
