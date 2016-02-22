@@ -1474,44 +1474,9 @@
       "Roles": [
         53,
         55,
-        57
-      ]
-    },
-    {
-      "Id": 125,
-      "Name": "yiim",
-      "CreateTime": "2016-02-03 06:57:24",
-      "Email": "yiim@foxmail.com",
-      "Password": "",
-      "RealName": "seamys",
-      "State": "2",
-      "Roles": [
-        56,
-        54,
-        55
-      ]
-    },
-    {
-      "Id": 125,
-      "Name": "yiim",
-      "CreateTime": "2016-02-03 07:02:10",
-      "Email": "yiim@foxmail.com",
-      "Password": "",
-      "RealName": "seamys",
-      "State": "2",
-      "Roles": []
-    },
-    {
-      "Id": 128,
-      "Name": "frllk",
-      "CreateTime": "2016-02-03 07:07:57",
-      "Email": "frllk@foxmail.com",
-      "Password": "",
-      "RealName": "frllk",
-      "State": "1",
-      "Roles": [
-        56,
-        54
+        57,
+        36,
+        35
       ]
     }
   ],
@@ -2041,7 +2006,10 @@
       "Id": 52,
       "Name": "asdf",
       "Functions": [
-        53
+        53,
+        60,
+        64,
+        66
       ]
     },
     {
@@ -2133,11 +2101,11 @@
       "Id": 60,
       "Name": "123456",
       "Functions": [
+        61,
+        63,
         64,
         65,
-        66,
-        63,
-        61
+        66
       ]
     },
     {

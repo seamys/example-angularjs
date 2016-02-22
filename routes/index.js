@@ -15,6 +15,7 @@ module.exports = function (app) {
     app.get('/:dir-:name', function (req, res) {
         res.render(req.params.dir + "/" + req.params.name);
     });
+    //get all user info by pageation
     app.get('/users', function (req, res) {
         var params = utils.format(req.query);
         res.send(users.get(params));
