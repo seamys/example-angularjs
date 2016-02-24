@@ -4,7 +4,7 @@
 
 包含其他项目:
 
-* [bower](http://twitter.github.com/bower/) 
+* [bower](http://bower.io/) 
 * [angular](https://angular.io/)
 * [angular-bootstrap](http://angular-ui.github.io/bootstrap/)
 * [jquery](http://jquery.com/)    
