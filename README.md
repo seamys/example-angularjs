@@ -42,6 +42,19 @@ node app.js
 ``` html
 localhost:3000
 ```
+## 项目运行截屏
+![1.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/1.gif)
+
+![2.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/2.gif)
+
+![3.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/3.gif)
+
+![4.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/4.gif)
+
+![5.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/5.gif)
+
+![6.gif](https://raw.githubusercontent.com/seamys/example-angularjs/master/screenshots/6.gif)
+
 ## .NET Web API 版本
 如果你是项目的早期关注者，非常遗憾的告诉您，早期.NET Web API 后端版本已经不再继续维护。但是您可以查阅早期的版本记录
 你可以访问如下地址：
