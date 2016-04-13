@@ -54,7 +54,8 @@
                     return methods.call('POST', url, null, data);
                 },
                 'delete': function (url, data) {
-                    return methods.call('DELETE', url, data, null);
+					 utils.confirm({ msg: "Temporarily disable the delete function. View Code: “/public/js/services/services.js:57 ”", ok: lang.ok });
+                    //return methods.call('DELETE', url, data, null);
                 }
             }
             return methods;
