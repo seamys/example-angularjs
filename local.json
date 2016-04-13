@@ -18,13 +18,13 @@
       "/components/remarkable-bootstrap-notify/bootstrap-notify.min.js"
     ],
     "/js/site.min.js": [
-      "/js/controllers/consolecontrollers.js",
-      "/js/controllers/userscontrollers.js",
-      "/js/controllers/rolescontrollers.js",
-      "/js/controllers/functionscontrollers.js",
+      "/js/controllers/consoleControllers.js",
+      "/js/controllers/usersControllers.js",
+      "/js/controllers/rolesControllers.js",
+      "/js/controllers/functionsControllers.js",
       "/js/directives/directives.js",
       "/js/filters/filters.js",
-      "/js/services/lang_cn.js",
+      "/js/services/lang_CN.js",
       "/js/services/services.js",
       "/js/site.js"
     ]
